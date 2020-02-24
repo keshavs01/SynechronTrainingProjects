@@ -1,0 +1,5 @@
+package com.annotation.domains;
+
+public class UsingAnnotations {
+
+}

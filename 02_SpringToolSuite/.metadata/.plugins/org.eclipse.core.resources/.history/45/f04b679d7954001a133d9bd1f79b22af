@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Past_Loan_Serivce">
+        <property name="context-root" value="Past_Loan_Serivce"/>
+    </wb-module>
+</project-modules>

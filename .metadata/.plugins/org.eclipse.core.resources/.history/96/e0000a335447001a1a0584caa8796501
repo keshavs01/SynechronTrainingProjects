@@ -1,0 +1,15 @@
+package com.streams.domains;
+
+public class HospitalApplication {
+	
+	public static void main(String[] args) {
+		
+		DoctorManager dm = new DoctorManager();
+		System.out.println("All Doctors");
+		System.out.println(dm.getDoctor());
+		
+		System.out.println("Doctor with Id:D0101 - "+dm.getDoctor("D101"));
+		System.out.println("Doctor with Id:D0102 - "+dm.getDoctor("D102"));
+	}
+	
+}

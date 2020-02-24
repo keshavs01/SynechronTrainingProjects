@@ -1,0 +1,17 @@
+package com.synechron.car_rental.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.client.support.BasicAuthenticationInterceptor;
+
+import feign.RequestInterceptor;
+
+@Configuration
+public class SecurityConfig {
+	
+	@Bean
+	public RequestInterceptor basicAuthRequestInterceptor(){
+		return new BasicAuthenticationInterceptor("india","india");
+	}
+}
+

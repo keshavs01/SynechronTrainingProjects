@@ -1,0 +1,8 @@
+package com.synechron.car_rental.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("CIBIL-SCORE-SERVICE")
+public class CibilScoreClient {
+
+}

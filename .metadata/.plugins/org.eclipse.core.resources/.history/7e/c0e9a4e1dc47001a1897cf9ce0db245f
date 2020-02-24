@@ -1,0 +1,8 @@
+package com.training.demo.domains;
+
+public class Doctor {
+	
+	private long doctorId;
+	private String doctorName;
+
+}

@@ -1,0 +1,12 @@
+package com.streams.domains;
+
+public class HospitalApplication {
+	
+	public static void main(String[] args) {
+		
+		DoctorManager dm = new DoctorManager();		
+		System.out.println(dm.getDoctor());
+						
+	}
+	
+}

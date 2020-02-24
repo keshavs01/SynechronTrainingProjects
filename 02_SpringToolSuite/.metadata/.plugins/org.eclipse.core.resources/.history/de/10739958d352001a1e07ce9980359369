@@ -1,0 +1,42 @@
+package com.synechron.car_rental.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.synechron.car_rental.entity.CibilScore;
+import com.synechron.car_rental.services.CibilScoreService;
+
+@RestController
+public class CibilScoreController {
+	
+	@Autowired
+	private CibilScoreService service;
+	
+	@GetMapping(path="/api/v1/cibilscore")
+	public List<CibilScore> getAll(){
+		return this.service.findAll();
+	}
+	
+	@PostMapping(path="/api/v1/cibilscore")
+	public CibilScore add(@RequestBody CibilScore entity) { // We will get entity from body of request
+		return this.service.add(entity);
+	}
+	
+	@PutMapping(path="/api/v1/cibilscore")
+	public CibilScore update(@RequestBody CibilScore entity){
+		return this.service.update(entity);
+	}
+	
+	@DeleteMapping(path="/api/v1/cibilscore")
+	public CibilScore delete(@RequestBody CibilScore entity) { // We will get entity from body of request
+		return this.service.delete(entity);
+	}
+
+}

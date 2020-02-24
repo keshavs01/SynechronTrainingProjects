@@ -1,0 +1,7 @@
+package com.synechron.paging_sorting.repos;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+public interface ScoreRepository extends PagingAndSortingRepository<CibilScore, ID> {
+
+}

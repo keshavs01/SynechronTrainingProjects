@@ -1,0 +1,5 @@
+package com.synechron.car_rental.entity;
+
+public class LoanApplication {
+
+}

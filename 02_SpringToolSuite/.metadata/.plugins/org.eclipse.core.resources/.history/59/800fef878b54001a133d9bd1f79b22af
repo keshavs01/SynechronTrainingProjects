@@ -1,0 +1,15 @@
+package com.synechron.pastLoanService;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+public class PastLoanSerivceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PastLoanSerivceApplication.class, args);
+	}
+
+}

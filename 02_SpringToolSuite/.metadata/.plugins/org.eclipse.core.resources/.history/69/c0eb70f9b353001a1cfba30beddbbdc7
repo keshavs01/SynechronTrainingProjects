@@ -1,0 +1,5 @@
+package com.synechron.loan_service.config;
+
+public class WebConfig {
+
+}

@@ -1,0 +1,16 @@
+package com.synechron.car_rental.feign;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@FeignClient("CIBIL-SCORE-SERVICE")
+public class CibilScoreClient {
+	
+	@RequestMapping(path="", method=org.springframework.http.HttpMethod.GET)
+	public List<CibilScore> getAll(){
+		
+	}
+
+}

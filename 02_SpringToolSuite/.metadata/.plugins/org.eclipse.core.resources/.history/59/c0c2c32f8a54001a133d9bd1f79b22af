@@ -1,0 +1,68 @@
+package com.synechron.loan_service.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.synechron.loan_service.entity.CibilScore;
+import com.synechron.loan_service.entity.LoanApplication;
+import com.synechron.loan_service.entity.repos.LoanRepository;
+import com.synechron.loan_service.feign.CibilScoreService;
+import com.synechron.loan_service.feign.PastHistoryService;
+
+@Service
+public class LoanService {
+	
+	@Autowired
+	public LoanRepository loanRepo;
+	
+	@Autowired
+	private CibilScoreService cibilService;
+	
+	@Autowired
+	private PastHistoryService pastLoanHistoryService;
+	
+	public List<LoanApplication> getAll(){
+		return this.loanRepo.findAll();
+	}
+	
+	public List<LoanApplication> getLoansByStatus(String status){
+		return this.loanRepo.findByStatus(status);
+	}
+	
+	public List<LoanApplication> processLoans(){
+		List<LoanApplication> listLoanApplication = this.loanRepo.findAll();
+		for(LoanApplication loanApp: listLoanApplication) {
+			
+			CibilScore score = this.cibilService.getScoreByPanId(loanApp.getPandNumber());
+			
+			if(score.getScore() > 200) {
+				loanApp.setStatus("APPROVED");
+			} else {
+				loanApp.setStatus("REJECTED");
+			}
+			this.loanRepo.save(loanApp);	
+		}
+		return this.loanRepo.findAll();
+	}
+	
+	public List<String> getPastLoanData(int id){
+//		List<String> listLoanApplication = this.loanRepo.findAll();
+//		for(LoanApplication loanApp: listLoanApplication) {
+//			
+//			CibilScore score = this.pastLoanHistoryService.getHistory();
+//			
+//			if(score.getScore() > 200) {
+//				loanApp.setStatus("APPROVED");
+//			} else {
+//				loanApp.setStatus("REJECTED");
+//			}
+//			this.loanRepo.save(loanApp);	
+//		}
+		return this.pastLoanHistoryService.getHistory(id);
+	}
+	
+
+}

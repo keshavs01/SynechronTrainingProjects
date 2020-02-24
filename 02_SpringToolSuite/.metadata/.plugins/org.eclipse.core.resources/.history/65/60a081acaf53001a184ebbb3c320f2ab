@@ -1,0 +1,21 @@
+package com.synechron.car_rental;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.synechron.car_rental.feign.CibilScoreClient;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+@FeignClient
+public class ClientServiceApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ctx =  SpringApplication.run(ClientServiceApplication.class, args);
+		CibilScoreClient score = ctx.getBean(CibilScoreClient.class);
+	}
+
+}

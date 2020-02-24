@@ -1,0 +1,26 @@
+package com.streams.domains;
+
+import java.util.List;
+
+public class PatientManager {
+
+	List<Patient> patientList;
+	
+	public PatientManager() {
+	}
+	
+	private void init(){
+		this.patientList.add(new Patient(21, "PN11", "D101"));
+		this.patientList.add(new Patient(22, "PN12", "D101"));
+		this.patientList.add(new Patient(23, "PN23", "D102"));
+		this.patientList.add(new Patient(24, "PN24", "D102"));
+		this.patientList.add(new Patient(25, "PN25", "D103"));
+		this.patientList.add(new Patient(26, "PN26", "D103"));
+		this.patientList.add(new Patient(27, "PN27", "D103"));
+		this.patientList.add(new Patient(28, "PN28", "D103"));
+		this.patientList.add(new Patient(29, "PN29", "D104"));
+		this.patientList.add(new Patient(30, "PN30", "D104"));
+		this.patientList.add(new Patient(31, "PN31", "D104"));
+	}
+
+}

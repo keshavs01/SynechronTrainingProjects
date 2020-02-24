@@ -1,0 +1,44 @@
+package com.training;
+
+import com.training.domains.*;
+import java.util.*;
+import java.util.stream.*;
+
+import static java.util.stream.Collectors.*; 
+
+public class UsingFilterAndMap {
+
+	List<Book> bookList;
+
+	public UsingFilterAndMap() {
+		super();
+		BookManager bookManager = new BookManager();
+		bookManager.initBooks();
+		this.bookList = bookManager.getBooks();
+		init();
+	}
+
+	private void init() {
+		this.bookList.add(new Book(201, "Stream1 book", "Stream1 Author", 530));
+		this.bookList.add(new Book(202, "Stream2 book", "Stream2 Author", 501));
+	}
+
+	public List<Book> bookLessThanFiveHundred() {
+		List<Book> bookList1 = this.bookList.stream().filter(
+				// bk.getRatePerUnit()>500 is just implementation of test method of predicate
+				(Book bk) -> bk.getRatePerUnit()<500
+				).collect(toList());
+		return bookList1;
+	}
+
+	public List<Book> bookGreaterThan(double criteria) {
+		List<Book> bookList1 = this.bookList.stream().filter((Book bk) -> bk.getRatePerUnit()>criteria).collect(toList());
+		return bookList1;
+	}
+	
+	public List<Double> priceOfStreamBooks(String criteria) {
+		List<Double> streamPriceBook= this.bookList.stream().filter((Book bk) -> bk.getBookName().contains(criteria)).map((books)-> books.getRatePerUnit()).collect(toList());
+		return streamPriceBook;
+	}
+
+}

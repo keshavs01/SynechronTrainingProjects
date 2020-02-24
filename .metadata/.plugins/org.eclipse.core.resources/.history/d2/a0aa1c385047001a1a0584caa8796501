@@ -1,0 +1,9 @@
+package com.streams.domains;
+
+public class PatientManager {
+
+	public PatientManager() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

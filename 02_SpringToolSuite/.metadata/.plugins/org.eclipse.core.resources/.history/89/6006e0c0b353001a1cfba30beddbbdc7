@@ -1,0 +1,9 @@
+package com.synechron.car_rental.entity.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.synechron.car_rental.entity.LoanApplication;
+
+public interface LoanRepository extends JpaRepository<LoanApplication, String> {
+
+}

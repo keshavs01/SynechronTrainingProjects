@@ -1,0 +1,11 @@
+package com.training.demo.domains;
+
+import lambok.Data;
+
+@Data
+public class Doctor {
+	
+	private long doctorId;
+	private String doctorName;
+
+}

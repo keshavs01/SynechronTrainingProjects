@@ -1,0 +1,11 @@
+package com.annotation.utils;
+
+import static java.lang.annotation.ElementType.METHOD;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Target;
+
+@Target(ElementType.METHOD)
+public @interface Query {
+	String sql();
+}

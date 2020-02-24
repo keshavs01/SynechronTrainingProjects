@@ -1,0 +1,24 @@
+package com.synechron.car_rental;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Contact;
+import io.swagger.v3.oas.annotations.info.Info;
+
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
+@EnableWebSecurity
+@EnableDiscoveryClient
+@OpenAPIDefinition(info = @Info(title = "Fetch Cibil Score",
+	contact = @Contact(email = "admin@synechron.com", name = "Keshav")))
+public class CibilScoreServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CibilScoreServiceApplication.class, args);
+	}
+
+}

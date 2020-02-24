@@ -1,0 +1,19 @@
+package com.training.demo.config;
+
+import org.springframework.context.annotation.Configuration;
+
+import com.training.demo.domains.Product;
+
+@Configuration
+public class AppConfig {
+
+	public Product tv() {
+		Product tv = new Product();
+		tv.setProductId(1001);
+		tv.setProductName("LG");
+		tv.setImageRef("/images/lg.jpg");
+		tv.setRatePerUnit(51000.00);
+		return tv;
+	}
+
+}

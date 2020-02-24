@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Feb 06 10:52:36 IST 2020
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Admin.TRNROOM2-03\\.m2\\repository\\org\\springframework\\spring-web\\5.1.13.RELEASE\\spring-web-5.1.13.RELEASE.jar=C\:\\spring-tool-suite-3.9.7.RELEASE-e4.10.0-win32-x86_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\travel-agency\\WEB-INF\\lib\\spring-web-5.1.13.RELEASE.jar
+org.eclipse.jst.jee.server\:travel-agency=C\:\\spring-tool-suite-3.9.7.RELEASE-e4.10.0-win32-x86_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\travel-agency

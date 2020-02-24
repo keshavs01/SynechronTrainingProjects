@@ -1,0 +1,39 @@
+package com.annotation.domains;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
+import com.annotation.utils.Table;
+import com.training.utils.MyAnnotation;
+
+public class UsingAnnotations {
+	
+	@Table(name="newTable")
+	public String getTable(){
+		
+		Class<?> clsRef = this.getClass();
+
+		try {
+			Method annotatedMethod = clsRef.getMethod("getTable");
+
+			MyAnnotation annotationMethod = annotatedMethod.getAnnotation(Table.class);
+			
+
+			message1 = annotationMethod.message();
+//			message1 = annotationField.message();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return message1;
+		return "";
+	}
+	
+	@Table(name="select * from table")
+	public String selectQuery(){
+		
+		return "";
+	}
+	
+
+}

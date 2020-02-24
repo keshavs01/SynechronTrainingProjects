@@ -1,0 +1,5 @@
+package com.synechron.car_rental.feign;
+
+public interface CibilScoreClient1 {
+
+}

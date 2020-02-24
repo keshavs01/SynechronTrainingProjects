@@ -1,0 +1,14 @@
+package com.training;
+
+import com.training.utils.MyAnnotation;
+
+public class UsingAnnotations {
+	
+	@MyAnnotation(message= "Hello fieldMessage")
+	private String msg;
+	
+	@MyAnnotation(message= "Hello methodMessage")
+	public String showMessage(){
+		return "Hello World";
+	}
+}

@@ -1,0 +1,9 @@
+package com.synechron.car_rental.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.synechron.car_rental.entity.CibilScore;
+
+public interface CibilScoreRepository extends JpaRepository<CibilScore, String> {
+
+}

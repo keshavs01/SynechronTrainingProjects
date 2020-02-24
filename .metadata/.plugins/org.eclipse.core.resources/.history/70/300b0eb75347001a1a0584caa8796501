@@ -1,0 +1,44 @@
+package com.streams.domains;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class PatientManager {
+
+	List<Patient> patientList = new ArrayList<Patient>();
+	
+	public PatientManager() {
+		init();
+	}
+	
+	private void init(){
+		this.patientList.add(new Patient(21, "PN11", "D101"));
+		this.patientList.add(new Patient(22, "PN12", "D101"));
+		this.patientList.add(new Patient(23, "PN23", "D102"));
+		this.patientList.add(new Patient(24, "PN24", "D102"));
+		this.patientList.add(new Patient(25, "PN25", "D103"));
+		this.patientList.add(new Patient(26, "PN26", "D103"));
+		this.patientList.add(new Patient(27, "PN27", "D103"));
+		this.patientList.add(new Patient(28, "PN28", "D103"));
+		this.patientList.add(new Patient(29, "PN29", "D104"));
+		this.patientList.add(new Patient(30, "PN30", "D104"));
+		this.patientList.add(new Patient(31, "PN31", "D104"));
+	}
+	
+	public Map<String, String> getPatient(String ...id){
+		Map<Integer, String> patiendMap = new HashMap<>();
+		if(id.length == 0){
+			patiendMap = this.patientList.stream()
+					.collect(Collectors.toMap(Patient::getId, Patient::getName));
+		} else {
+			patiendMap = this.patientList.stream()
+					.filter((doc)-> doc.getDoctorId().equals(id[0]))
+					.collect(Collectors.toMap(Patient::getId, Patient::getName));
+		}
+		return patiendMap;		
+	}
+
+}

@@ -1,0 +1,6 @@
+package com.training.function;
+
+public interface CurrencyConverter<T,R> {
+	public T convert(T t);
+
+}

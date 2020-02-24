@@ -1,0 +1,8 @@
+package com.training.demo.config;
+
+
+
+@Configuration
+public class AppConfig {
+
+}

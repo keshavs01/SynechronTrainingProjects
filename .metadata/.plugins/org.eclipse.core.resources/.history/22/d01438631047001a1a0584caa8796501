@@ -1,0 +1,17 @@
+package com.training;
+
+import java.util.List;
+
+import com.training.domains.Book;
+
+public class MainApplication {
+
+	public static void main(String[] args) {
+		UsingFilterAndMap filterMapExample = new UsingFilterAndMap();
+		List<Book> bookLst = filterMapExample.bookLessThanFiveHundred();
+		System.out.println("Book less than 400-----");
+		bookLst.forEach(System.out::println);
+
+	}
+
+}

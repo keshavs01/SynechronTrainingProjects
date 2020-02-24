@@ -1,0 +1,11 @@
+package com.synechron.loan_service.entity.repos;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.synechron.loan_service.entity.LoanApplication;
+
+public interface LoanRepository extends JpaRepository<LoanApplication, String> {
+	public List<LoanApplication> findByStatus();
+}

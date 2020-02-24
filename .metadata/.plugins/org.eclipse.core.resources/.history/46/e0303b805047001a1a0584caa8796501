@@ -1,0 +1,38 @@
+package com.streams.domains;
+
+public class Doctor {
+
+	private String doctorId;
+	private String name;
+	
+	public Doctor() {
+
+	}
+
+	public Doctor(int doctorId, String name) {
+		super();
+		this.doctorId = doctorId;
+		this.name = name;
+	}
+
+	public int getDoctorId() {
+		return doctorId;
+	}
+
+	public void setDoctorId(int doctorId) {
+		this.doctorId = doctorId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Doctor [doctorId=" + doctorId + ", name=" + name + "]";
+	}
+}

@@ -1,0 +1,11 @@
+package com.annotation.domains;
+
+import com.annotation.utils.Table;
+
+public class UsingAnnotations {
+	
+	@Table(name="asd")
+	public String table;
+	
+
+}

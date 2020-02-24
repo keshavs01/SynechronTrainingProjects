@@ -1,0 +1,19 @@
+package com.training.demo;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.training.demo.config.AppConfig;
+import com.training.demo.domains.Product;
+
+public class MainApplication {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+		Product prd = ctx.getBean(Product.class);
+		System.out.println("Found" + prd);
+
+	}
+
+}

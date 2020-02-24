@@ -1,0 +1,13 @@
+package com.training;
+
+import com.training.utils.MyAnnotation;
+
+public class UsingAnnotations {
+	
+	@MyAnnotation(message= "Hello India")
+	private String msg;
+	
+	public String showMessage(){
+		return "Hello World";
+	}
+}

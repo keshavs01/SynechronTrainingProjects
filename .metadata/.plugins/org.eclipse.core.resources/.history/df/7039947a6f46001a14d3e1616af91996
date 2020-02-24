@@ -1,0 +1,25 @@
+package com.training.domains;
+
+import java.util.List;
+
+public class Application {
+	
+	public static void main(String[] args) {
+		BookManager mgr = new BookManager();
+		mgr.initBooks();
+		
+		List<Book> bookList = mgr.getBooks();
+		
+		//LAMBDA EXPRESSION - Here every time println method will be called for each book
+		bookList.forEach((eachBook)->{
+			System.out.println(eachBook);
+		});
+		
+		mgr.addBooks(new Book(100,"Third book","Third Author", 230));
+		
+		//METHOD REFERENCE -  here reference is being passed and println method will handle
+		// how to print the data
+		bookList.forEach(System.out::println);
+	}
+
+}

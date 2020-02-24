@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Cibil_Score_Client"/>
+<aop-project name="Service_Registry"/>
+<aop-project name="Loan_Service"/>
+<aop-project name="Customer_Image_Service"/>
+<aop-project name="Paging_Sorting"/>
+<aop-project name="Past_Loan_Serivce"/>
+<aop-project name="Cibil_Score_Service"/>
+<aop-project name="Client_Service"/>
+<aop-project name="Config_Server"/>
+</aop-reference-model>

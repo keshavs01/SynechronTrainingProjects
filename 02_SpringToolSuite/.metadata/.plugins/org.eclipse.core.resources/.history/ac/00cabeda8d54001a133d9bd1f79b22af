@@ -1,0 +1,9 @@
+
+server.port=3005
+#server.port=${random.int(4000,5000)}
+
+eureka.instance.instance-id=${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+#management.endpoints.web.exposure.include=*
+#logging.file=c:/abc.log
+#logging.level.com.synechron.image_service.*=debug

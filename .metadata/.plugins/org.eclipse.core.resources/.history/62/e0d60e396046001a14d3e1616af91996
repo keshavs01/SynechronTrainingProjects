@@ -1,0 +1,25 @@
+package com.training.utils;
+
+import java.lang.annotation.Annotation;
+
+import com.training.UsingAnnotations;
+
+public class AnnotationProcessor {
+	
+	public static void main(String[] args) {
+		
+		// Create instance of class whose object has to be annotated
+		UsingAnnotations secondObj = new UsingAnnotations();
+		
+		//Now get reference of the class
+		Class<?> clsRef = secondObj.getClass();
+		
+		Method annotatedMethod = clsRef.getMethod("showMessage");
+		
+		MyAnnotation annotation = annotatedMethod.getAnnotation(MyAnnotation.class);
+		
+		System.out.println(annotation.message());
+		
+	}
+
+}

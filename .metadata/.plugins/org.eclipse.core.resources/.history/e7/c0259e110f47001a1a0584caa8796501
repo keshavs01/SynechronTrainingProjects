@@ -1,0 +1,11 @@
+package com.training;
+
+public class MainApplication {
+
+	public static void main(String[] args) {
+		UsingFilterAndMap filterMapExample = new UsingFilterAndMap();
+		List<Book> bookLst = filterMapExample.bookGreaterThanFiveHundred();
+
+	}
+
+}

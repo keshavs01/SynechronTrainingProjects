@@ -1,0 +1,8 @@
+
+server.port=${port:random.int(3010,3050)}
+
+spring.application.name=past-loan-service
+
+#management.endpoints.web.exposure.include=*
+logging.file=c:/abc.log
+logging.level.com.synechron.image_service.*=debug

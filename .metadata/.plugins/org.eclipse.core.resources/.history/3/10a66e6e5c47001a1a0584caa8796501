@@ -1,0 +1,5 @@
+package com.annotation.utils;
+
+public @interface Table {
+
+}

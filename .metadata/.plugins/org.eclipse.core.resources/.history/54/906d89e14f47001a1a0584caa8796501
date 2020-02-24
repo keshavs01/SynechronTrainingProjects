@@ -1,0 +1,21 @@
+package com.streams.domains;
+
+import java.util.List;
+
+public class DoctorManager {
+
+	private List<Doctor> doctorList;
+	public DoctorManager() {
+		init();
+	}
+	
+	private void init(){
+		this.doctorList.add(new Doctor(101, "Amit Singh"));
+		this.doctorList.add(new Doctor(101, "Subhas"));
+		this.doctorList.add(new Doctor(101, "Ananya Chanda"));
+		this.doctorList.add(new Doctor(101, "Priyanka"));
+		this.doctorList.add(new Doctor(101, "Parag"));
+		this.doctorList.add(new Doctor(101, "Ananya Singh"));
+	}
+
+}

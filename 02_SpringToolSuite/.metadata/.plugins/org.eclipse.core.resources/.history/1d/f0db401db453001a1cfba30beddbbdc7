@@ -1,0 +1,16 @@
+package com.synechron.loan_service.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.synechron.loan_service.entity.LoanApplication;
+
+@Configuration
+public class WebConfig {
+	
+	@Bean
+	public LoanApplication loadApplication{
+		return new LoanApplication();
+	}
+
+}

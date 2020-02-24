@@ -1,0 +1,24 @@
+package com.synechron.pastLoanService.controllers;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+//@CrossOrigin(origins="*")
+public class LoanHistoryController {
+	
+	@GetMapping(path = "/api/loan/history/{id}")
+	public List<String> getHistory(@PathVariable("id") int id){
+		List<String> loanList = Arrays.asList("Jew1Loan -2017","HomeLoan -2010");
+		if(id<100) {
+			loanList = Arrays.asList("CarLoan -2014","PersonalLoan -2006");
+		}
+		return loanList;
+	}
+	
+
+}

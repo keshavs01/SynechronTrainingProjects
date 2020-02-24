@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;travel-agency/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;boot-ioc&apos;&#x0D;&#x0A;- Destination element: &apos;travel-agency/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     boot-ioc/src/main/java/com.example.demo.ifaces&#x0D;&#x0A;     boot-ioc/src/main/java/com.example.demo.daos" description="Copy packages" destination="=travel-agency/src\/main\/java" element1="/src\/main\/java&lt;com.example.demo.ifaces" element2="/src\/main\/java&lt;com.example.demo.daos" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1580977806491" version="1.0"/>
+</session>

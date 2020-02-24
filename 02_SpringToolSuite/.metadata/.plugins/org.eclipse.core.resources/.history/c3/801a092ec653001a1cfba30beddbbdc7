@@ -1,0 +1,10 @@
+package com.synechron.loan_service.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Service;
+
+@FeignClient("CIBIL-SCORE-SERVICE")
+@Service
+public interface CibilScoreService {
+
+}

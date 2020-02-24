@@ -1,0 +1,29 @@
+package com.synechron.loan_service.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.synechron.loan_service.entity.LoanApplication;
+import com.synechron.loan_service.services.LoanService;
+
+@RestController
+public class LoanController {
+	
+	@Autowired
+	public LoanService service;
+	
+	@GetMapping(path = "/api/v1/loans")
+	public List<LoanApplication> getAllLoans(){
+		return this.service.getAll(); 
+	}
+	
+	@GetMapping(path = "/api/v1/loans")
+	public List<LoanApplication> getLoansByStatus(@PathVariable("status") String status){
+		return this.service.getLoansByStatus(status); 
+	}
+
+}

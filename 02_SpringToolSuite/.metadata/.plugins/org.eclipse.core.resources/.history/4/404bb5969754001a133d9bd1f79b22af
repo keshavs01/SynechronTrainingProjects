@@ -1,0 +1,18 @@
+package com.synechron.paging_sorting.entity;
+
+import javax.persistence.Id;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name="cibilscore")
+public class CibilScore {
+
+	@Id
+	private String panNumber;
+	private String cardHolderName;
+	private long pinCode;
+	private long score;
+
+}

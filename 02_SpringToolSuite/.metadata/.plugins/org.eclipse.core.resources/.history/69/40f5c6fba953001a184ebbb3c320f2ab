@@ -1,0 +1,5 @@
+package com.synechron.car_rental.config;
+
+public class SecurityConfig {
+
+}

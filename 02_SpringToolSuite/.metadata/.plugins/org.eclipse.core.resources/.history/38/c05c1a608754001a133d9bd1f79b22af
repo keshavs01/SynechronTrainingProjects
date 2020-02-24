@@ -1,0 +1,10 @@
+package com.synechron.loan_service.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("PAST-")
+public interface PastHistoryService {
+	
+	public List<String> getHistory(int id);
+
+}

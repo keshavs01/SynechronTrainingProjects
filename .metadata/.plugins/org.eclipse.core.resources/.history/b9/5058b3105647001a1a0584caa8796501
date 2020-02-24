@@ -1,0 +1,63 @@
+package com.streams.domains;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class DoctorManager {
+
+	private List<Doctor> doctorList = new ArrayList<>();
+	
+	public DoctorManager() {
+		init();
+	}
+	
+	private void init(){
+		
+		this.doctorList.add(new Doctor("D101", "Amit Singh", "ÖPD"));
+		this.doctorList.add(new Doctor("D102", "Subhas Pandey","ÖPD"));
+		this.doctorList.add(new Doctor("D103", "Ananya Chanda","Dentist"));
+		this.doctorList.add(new Doctor("D104", "Priyanka Dhamankar","Dentist"));
+		this.doctorList.add(new Doctor("D105", "Parag Singh","Child"));
+		this.doctorList.add(new Doctor("D106", "Ananya Singh","Child"));
+		
+	}
+	
+	public Map<String, String> getDoctor(String ...id){
+		Map<String, String> docMap = new HashMap<>();
+		if(id.length == 0){
+			docMap = this.doctorList.stream()
+					.collect(Collectors
+								.toMap(Doctor::getDoctorId, Doctor::getName)
+							);
+		} else {
+			docMap = this.doctorList.stream()
+					.filter((doc)-> doc.getDoctorId().equals(id[0]))
+					.collect(Collectors.toMap(Doctor::getDoctorId, Doctor::getName));
+		}
+		return docMap;		
+	}
+	
+	public Map<String, String> getDoctorsSpeciality(String ...speciality){
+		Map<String, String> docMap = new HashMap<>();
+		if(speciality.length == 0){
+			docMap = this.doctorList.stream()
+					.collect(Collectors
+								.toMap(Doctor::getSpeciality, Doctor::getName)
+							);
+		} else {
+			docMap = this.doctorList.stream()
+					.filter((doc)-> doc.getDoctorId().equals(speciality[0]))
+					.collect(Collectors
+							.toMap(Doctor::getSpeciality, Doctor::getName)
+							);
+		}
+		return docMap;		
+	}
+	
+	
+
+}

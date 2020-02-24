@@ -1,0 +1,50 @@
+package com.training.domains;
+
+import java.util.List;
+
+import com.training.function.CurrencyConverter;
+
+public class Application {
+	
+	public static void printData(List<Book> bookList, CurrencyConverter<Double, Double> inrToOther){
+		bookList.forEach((eachBook)->{
+			System.out.println("Book [bookNumber=" + eachBook.getBookNumber() 
+			+ ", bookName=" + eachBook.getBookName()
+			+ ", ratePerUnitInINR=" + eachBook.getRatePerUnit() 
+			+ ", ratePerUnitInEURO=" + inrToOther.convert(eachBook.getRatePerUnit()) + "]");
+		});
+	}
+	
+	public static void main(String[] args) {
+		
+		BookManager mgr = new BookManager();
+		mgr.initBooks();
+		
+		List<Book> bookList = mgr.getBooks();
+		
+		//LAMBDA EXPRESSION - Here every time println method will be called for each book
+//		bookList.forEach((eachBook)->{
+//			System.out.println(eachBook);
+//		});
+		
+		//Adding a third book
+		mgr.addBooks(new Book(100,"Third book","Third Author", 230));
+		
+		//METHOD REFERENCE -  here reference is being passed and println method will handle
+		// how to print the data
+		bookList.forEach(System.out::println);
+	
+	
+		//Using FUNCTIONAL INTERFACE
+		CurrencyConverter<Double, Double> inrToUsd = (inr) -> inr/72.0;		
+		System.out.println("Book price in USD--------------");
+		printData(bookList,inrToUsd);
+		
+		//Using FUNCTIONAL INTERFACE
+		CurrencyConverter<Double, Double> inrToEuro = (inr) -> inr/80;		
+		System.out.println("Book price in EURO--------------");		
+		printData(bookList,inrToEuro);
+		
+	
+	}
+}

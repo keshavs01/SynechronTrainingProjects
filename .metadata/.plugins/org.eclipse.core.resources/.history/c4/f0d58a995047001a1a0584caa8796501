@@ -1,0 +1,16 @@
+package com.streams.domains;
+
+import java.util.List;
+
+public class PatientManager {
+
+	List<Patient> patientList;
+	
+	public PatientManager() {
+	}
+	
+	private void init(){
+		this.patientList.add(new Patient(21, "P011", 101));
+	}
+
+}

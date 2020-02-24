@@ -1,0 +1,13 @@
+package com.streams.domains;
+
+public class Doctor {
+
+	private int doctorId;
+	private String name;
+	
+	public Doctor() {
+
+	}
+	
+
+}

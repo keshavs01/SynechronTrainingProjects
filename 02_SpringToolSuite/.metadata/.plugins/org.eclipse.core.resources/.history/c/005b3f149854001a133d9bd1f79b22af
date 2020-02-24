@@ -1,0 +1,14 @@
+package com.synechron.paging_sorting.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PagingControllers {
+	
+	@GetMapping(path="")
+	public List<CibilScore> getScore(){
+		return null;
+	}
+
+}

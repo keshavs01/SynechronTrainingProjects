@@ -1,0 +1,25 @@
+package com.synechron.paging_sorting.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.synechron.paging_sorting.entity.CibilScore;
+import com.synechron.paging_sorting.repos.ScoreRepository;
+
+@RestController
+public class PagingControllers {
+	
+	@Autowired
+	private ScoreRepository repo;
+	
+	@GetMapping(path="")
+	public Iterable<CibilScore> getScoresByOrder(String propName){
+		return this.repo.findAll(Sort.by(propName));
+//		return null;
+	}
+
+}

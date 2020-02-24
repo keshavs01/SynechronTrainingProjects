@@ -1,0 +1,9 @@
+package com.synechron.image_service.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.synechron.image_service.entity.Image;
+
+public interface ImageRepository extends JpaRepository<Image, Long> {
+
+}

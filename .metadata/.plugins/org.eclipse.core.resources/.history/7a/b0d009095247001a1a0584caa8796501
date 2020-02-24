@@ -1,0 +1,9 @@
+package com.streams.domains;
+
+public class HospitalApplication {
+
+	public HospitalApplication() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

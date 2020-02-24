@@ -1,0 +1,12 @@
+package com.synechron.car_rental.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.synechron.car_rental.entity.CibilScore;
+
+@Repository
+public interface CibilScoreRepository extends JpaRepository<CibilScore, String> {
+
+	public Long findScoreByPanNumber(String panId);
+}

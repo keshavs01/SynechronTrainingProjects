@@ -1,0 +1,15 @@
+package com.training.domains;
+
+import java.util.*;
+
+public class BookManager {
+	
+	private List<Book> bookList;
+	
+	public List<Book> initBooks(){
+		this.bookList = new ArrayList<>();
+		
+		return this.bookList;
+	}
+
+}

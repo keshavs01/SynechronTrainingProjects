@@ -1,0 +1,14 @@
+package com.synechron.car_rental.config;
+
+import org.springframework.context.annotation.Configuration;
+
+import feign.RequestInterceptor;
+
+@Configuration
+public class SecurityConfig {
+	
+	public RequestInterceptor basicRequestInterceptor(){
+		return this.basicRequestInterceptor();
+	}
+}
+

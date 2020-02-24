@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=Cibil_Score_Service/C:\/Users\/Admin.TRNROOM2-03\/.m2\/repository\/org\/springframework\/security\/spring-security-config\/5.1.7.RELEASE\/spring-security-config-5.1.7.RELEASE.jar&lt;org.springframework.security.config.annotation.web.configuration(WebSecurityConfigurerAdapter.class[WebSecurityConfigurerAdapter" modifiers="1057" timestamp="1582094904875"/>
+<typeInfo handle="=Customer_Image_Service/C:\/Users\/Admin.TRNROOM2-03\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.1.15.RELEASE\/spring-data-jpa-2.1.15.RELEASE.jar&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1581051881917"/>
+<typeInfo handle="=Paging_Sorting/C:\/Users\/Admin.TRNROOM2-03\/.m2\/repository\/org\/springframework\/data\/spring-data-commons\/2.1.15.RELEASE\/spring-data-commons-2.1.15.RELEASE.jar&lt;org.springframework.data.repository(PagingAndSortingRepository.class[PagingAndSortingRepository" modifiers="1537" timestamp="1581051884472"/>
+</typeInfoHistroy>

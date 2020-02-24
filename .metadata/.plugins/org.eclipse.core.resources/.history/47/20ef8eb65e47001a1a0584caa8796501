@@ -1,0 +1,20 @@
+package com.annotation.domains;
+
+import com.annotation.utils.Table;
+
+public class UsingAnnotations {
+	
+	@Table(name="newTable")
+	public String getTable(){
+		
+		return "";
+	}
+	
+	@Table(name="select * from table")
+	public String selectQuery(){
+		
+		return "";
+	}
+	
+
+}

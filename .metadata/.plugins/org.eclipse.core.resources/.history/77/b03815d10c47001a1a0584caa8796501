@@ -1,0 +1,23 @@
+package com.training;
+
+import com.training.domains.*;
+import java.util.*;
+import java.util.stream.*;
+
+public class UsingFilterAndMap {
+	
+	List<Book> bookList;
+
+	public UsingFilterAndMap() {
+		super();
+		BookManager bookManager = new BookManager();
+		this.bookList = bookManager.getBooks();
+	}
+	
+	private void init(){
+		this.bookList.add(new Book(200,"Stream book","Stream Author", 530));
+	}
+	
+	
+
+}

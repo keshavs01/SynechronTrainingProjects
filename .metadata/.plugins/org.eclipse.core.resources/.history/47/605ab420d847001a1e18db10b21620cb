@@ -1,0 +1,23 @@
+package com.training.demo.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
+
+import com.training.demo.domains.Product;
+
+@Configuration
+public class AppConfig {
+
+	@Bean
+	@Lazy
+	public Product tv() {
+		Product tv = new Product();
+		tv.setProductId(1001);
+		tv.setProductName("LG");
+		tv.setImageRef("/images/lg.jpg");
+		tv.setRatePerUnit(51000.00);
+		return tv;
+	}
+
+}

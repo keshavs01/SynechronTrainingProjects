@@ -1,0 +1,16 @@
+package com.streams.domains;
+
+import java.util.List;
+
+public class DoctorManager {
+
+	private List<Doctor> doctorList;
+	public DoctorManager() {
+	}
+	
+	private void init(){
+		
+		
+	}
+
+}

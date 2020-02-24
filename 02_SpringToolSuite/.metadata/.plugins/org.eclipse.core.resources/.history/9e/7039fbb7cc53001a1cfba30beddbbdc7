@@ -1,0 +1,44 @@
+package com.synechron.loan_service.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.synechron.loan_service.entity.CibilScore;
+import com.synechron.loan_service.entity.LoanApplication;
+import com.synechron.loan_service.entity.repos.LoanRepository;
+import com.synechron.loan_service.feign.CibilScoreService;
+
+@Service
+public class LoanService {
+	
+	@Autowired
+	public LoanRepository loanRepo;
+	
+	@Autowired
+	private CibilScoreService cibilService;
+	
+	public List<LoanApplication> getAll(){
+		return this.loanRepo.findAll();
+	}
+	
+	public List<LoanApplication> getLoansByStatus(String status){
+		return this.loanRepo.findByStatus(status);
+	}
+	
+	public List<LoanApplication> processLoans(){
+		List<LoanApplication> listLoanApplication = this.loanRepo.findAll();
+		List<CibilScore> finalList = new ArrayList<>();
+		for(CibilScore cibilScore: listScore) {
+			
+			CibilScore score = this.cibilService.getScoreByPanId(cibilScore.getPanNumber());
+			if(score.getScore() > 200)
+				this.cibilService.
+		}
+		return finalList;
+	}
+	
+
+}
